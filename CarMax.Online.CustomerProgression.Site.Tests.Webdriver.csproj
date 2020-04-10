@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <AssemblyName>CarMax.Online.CustomerProgression.Site.Tests.Webdriver</AssemblyName>
+
+    <RootNamespace>CarMax.Online.CustomerProgression.Site.Tests.Webdriver</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="allure-report\**" />
+    <Compile Remove="allure-results\**" />
+    <Compile Remove="node_modules\**" />
+    <Compile Remove="v1\snapshots\temp\**" />
+    <Compile Remove="v2\snapshots\temp\**" />
+    <EmbeddedResource Remove="allure-report\**" />
+    <EmbeddedResource Remove="allure-results\**" />
+    <EmbeddedResource Remove="node_modules\**" />
+    <EmbeddedResource Remove="v1\snapshots\temp\**" />
+    <EmbeddedResource Remove="v2\snapshots\temp\**" />
+    <None Remove="allure-report\**" />
+    <None Remove="allure-results\**" />
+    <None Remove="node_modules\**" />
+    <None Remove="v1\snapshots\temp\**" />
+    <None Remove="v2\snapshots\temp\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="package-lock.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.0.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
+    <PackageReference Include="coverlet.collector" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="v2\tests\" />
+    <Folder Include="v2\pages\" />
+    <Folder Include="snapshots\baseline\" />
+    <Folder Include="snapshots\baseline\desktop_chrome\" />
+    <Folder Include="snapshots\baseline\desktop_firefox\" />
+    <Folder Include="snapshots\baseline\desktop_edge\" />
+  </ItemGroup>
+
+</Project>

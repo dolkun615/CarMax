@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "es7"
+    ],
+    "target": "es5",
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": [ "./*" ],
+      "pages/*": [ "./v1/pages/*", "./v2/pages/*" ],
+      "test/*": [ "./v1/tests/*", "./v2/tests/*" ]
+    },
+    "types": [ "@wdio/sync", "mocha", "chai", "node", "webdriverio" ]
+  },
+  "include": [
+    "./v1/tests/**/*.ts",
+    "./v1/pages/**/*.ts",
+    "./v1/snapshots/**/*.ts",
+    "./v2/tests/**/*.ts",
+    "./v2/pages/**/*.ts",
+    "./v2/snapshots/**/*.ts",
+    "./utility/**/*.ts"
+  ],
+  "exclude": [
+    "./node_modules"
+  ],
+  "compileOnSave": false
+}
