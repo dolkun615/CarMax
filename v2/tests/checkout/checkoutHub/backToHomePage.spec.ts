@@ -16,6 +16,7 @@ describe('CheckoutHub V2 ', () => {
         waitUntilUrlIncludes("vehicle-history");
     });
     it('Clicking CarMax Logo routes back to Home Page', () => {
+        //this is the link that we need to click
         checkoutPage.carMaxLogo.click();
         browser.pause(2000);
         checkoutPage.findYourCarButtonInHomePage.isDisplayed().should.be.true;
